@@ -1,0 +1,185 @@
+
+
+   
+
+// import React, { useState } from 'react';
+// import './SideComponent.css';
+// import {
+//   FaHome,
+//   FaBuilding,
+//   FaAddressBook,
+//   FaUserGraduate,
+//   FaMoneyBill,
+//   FaBookOpen,
+//   FaClipboardList,
+//   FaShieldAlt,
+//   FaVideo,
+//   FaVideoSlash,
+//   FaDollarSign,
+//   FaBars,
+  
+// } from 'react-icons/fa';
+// import { Link } from 'react-router-dom';
+// import SidebarItem from './SidebarItem';
+
+// const App = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+ 
+
+//   const toggleSidebar = () => {
+//     setIsOpen(!isOpen);
+//   };
+
+ 
+
+ 
+//   return (
+//     <>
+//       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+
+//         <div className='sidebar-top'>
+//         <img src='/logo-drig.png' alt='Logo' />
+//           </div>
+//           <div className="current-session-quick-links">
+//           <p>Current Session :2024-25</p>
+//           <Link to="/" className="current-session">
+//             {isOpen && <span className="sidebar-text">Quick Links</span>}
+//           </Link>
+//         </div>
+       
+
+       
+//         <SidebarItem
+//           icon={FaBuilding}
+//           text="Multi Branch"
+//           subItems={[{ text: 'Subitem 1', path: '/multi-branch/subitem1' }, { text: 'Subitem 2', path: '/multi-branch/subitem2' }]}
+//         />
+//         <SidebarItem
+//           icon={FaAddressBook}
+//           text="Front Office"
+//           subItems={[
+//             { text: 'Admission Enquiry', path: '/admission' },
+//             { text: 'Visitor Book', path: '/front-office/visitor-book' },
+//             { text: 'Phone Call Log', path: '/front-office/phone-call-log' },
+//             { text: 'Postal Dispatch', path: '/front-office/postal-dispatch' }
+//           ]}
+//         />
+//         <SidebarItem
+//           icon={FaUserGraduate}
+//           text="Student Information"
+//         />
+//         <SidebarItem
+//           icon={FaMoneyBill}
+//           text="Fees Collection"
+//         />
+//         <SidebarItem
+//           icon={FaBookOpen}
+//           text="Online Course"
+//         />
+//         <SidebarItem
+//           icon={FaClipboardList}
+//           text="Behaviour Records"
+//         />
+//         <SidebarItem
+//           icon={FaShieldAlt}
+//           text="Two Factor Authentication"
+//         />
+//         <SidebarItem
+//           icon={FaVideo}
+//           text="Gmeet Live Classes"
+//         />
+//         <SidebarItem
+//           icon={FaVideoSlash}
+//           text="Zoom Live Classes"
+//         />
+//         <SidebarItem
+//           icon={FaDollarSign}
+//           text="Income"
+//         />
+//       </div>
+
+//       <div className={`sidebar-toggle ${isOpen ? 'open' : ''}`} onClick={toggleSidebar}>
+//         <FaBars />
+//       </div>
+
+      
+//     </>
+//   );
+// };
+
+// export default App;
+
+
+
+// import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
+// import { FaChevronDown,   FaAngleDoubleRight, FaChevronLeft } from 'react-icons/fa';
+
+// const SidebarItem = ({ icon: Icon, text, subItems }) => {
+//   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+
+//   const toggleSubMenu = () => {
+//     setIsSubMenuOpen(!isSubMenuOpen);
+//   };
+
+//   return (
+//     <div>
+//       <div className="sidebar-item" onClick={toggleSubMenu}>
+//         <Icon className="sidebar-icon" />
+//         <span className="sidebar-text">{text}</span>
+//         <span className="sidebar-arrow">
+//           {isSubMenuOpen ? <FaChevronDown /> : <FaChevronLeft />}
+//         </span>
+//       </div>
+//       {isSubMenuOpen && subItems && (
+//         <div className="sidebar-submenu">
+//           {subItems.map((subItem, index) => (
+//             <Link to={subItem.path} key={index} className="sidebar-subitem">
+//             <FaAngleDoubleRight className='sidebar-subitem-icon' />
+//             <span>{subItem.text}</span>
+//           </Link>
+//           ))}
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default SidebarItem;
+
+
+
+// import React from 'react'
+// import { FaSearch, FaTasks, FaCalendarAlt, FaWhatsapp, FaUser } from 'react-icons/fa';
+// import './navbar.css'
+
+// const Navbar = () => {
+//   return (
+//     <nav className="navbar">
+//       <div className="navbar-logo">
+//         <a href="/">EduTech</a>
+//       </div>
+//       <div className="navbar-actions">
+//       <div className="navbar-search">
+//         <input type="text" placeholder="Search..." />
+//         <button type="button"><FaSearch /></button>
+//       </div>
+      
+//         <select name="currency" className="navbar-select">
+//           <option value="USD">USD</option>
+//           <option value="EUR">EUR</option>
+//         </select>
+//         <select name="language" className="navbar-select">
+//           <option value="EN">EN</option>
+//           <option value="ES">Hindi</option>
+//         </select>
+//         <button type="button" className="navbar-icon"><FaTasks /></button>
+//         <button type="button" className="navbar-icon"><FaCalendarAlt /></button>
+//         <button type="button" className="navbar-icon"><FaWhatsapp /></button>
+//         <button type="button" className="navbar-icon"><FaUser /></button>
+//       </div>
+//     </nav>
+//   )
+// }
+
+// export default Navbar;

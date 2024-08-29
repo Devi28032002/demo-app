@@ -1,0 +1,88 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 1rem;
+  }
+  
+  .navbar-logo a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-left: 35px;
+  }
+  
+  .navbar-search {
+    display: flex;
+    align-items: center;
+   
+  }
+  
+  .navbar-search input {
+    padding: 0.5rem;
+    border-radius: 4px 0 0 4px;
+    border: none;
+  }
+  
+  .navbar-search button {
+    padding: 0.5rem;
+    background-color: #555;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    color: white;
+  }
+  
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-select {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+  }
+  
+  .navbar-icon {
+    margin: 0 0.5rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-search, .navbar-actions {
+      width: 100%;
+      justify-content: space-between;
+      order: 2;
+    }
+  
+    .navbar-logo {
+      order: 1;
+    }
+  
+    .navbar-search input {
+      flex: 1;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-search, .navbar-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .navbar-search input, .navbar-search button {
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+  
+    .navbar-select, .navbar-icon {
+      width: 100%;
+      text-align: center;
+    }
+  }
